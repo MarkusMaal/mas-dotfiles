@@ -1,0 +1,4 @@
+# Extra env variables
+# env = MY_GLOBAL_ENV,setting
+
+env = XDG_MENU_PREFIX,arch-
