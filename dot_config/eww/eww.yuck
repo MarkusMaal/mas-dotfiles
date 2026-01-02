@@ -1,0 +1,70 @@
+(defwindow desktop
+           :monitor 0
+           :geometry (geometry :x "0%"
+                               :y "0%"
+                               :width "700px"
+                               :height "700px"
+                               :anchor "center")
+           :stacking "bottom"
+           :windowtype "dock"
+           :class "window"
+           :wm-ignore true
+  (container))
+
+(defwindow logo
+          :monitor 0
+          :geometry (geometry :x "0%"
+                              :y "2%"
+                              :width "455px"
+                              :height "150px"
+                              :anchor "bottom center")
+          :stacking "bottom"
+          :windowtype "dock"
+          :class "window"
+          :wm-ignore false
+   (mlogo))
+
+(defwidget mlogo []
+    (box :space-evenly false :orientation "h" :spacing 170
+        (box :class "logo")
+        (label :class "logo-text" :text "markuse arvuti asjad")
+    )
+)   
+
+(defwidget container []
+    (box :class "rootcontainer" :space-evenly true :orientation "v"
+        (box :class "container" :orientation "h"
+          (box :class "icon" :style "background-image: url('images/games.png')" (
+              button :tooltip "Käivita MarkuStation" :onclick "'/home/markus/.mas/Markuse asjad/MarkuStation2' & disown" "")
+          )
+          (box :class "icon" :style "background-image: url('images/word.png')" (
+              button :tooltip "FreeOffice Textmaker" :onclick "freeoffice-textmaker" "")
+          )
+          (box :class "icon" :style "background-image: url('images/www.png')" (
+              button :tooltip "Veebilehitseja" :onclick "floorp & disown" "")
+          )
+        )
+        (box :class "container" :orientation "h"
+          (box :class "icon" :style "background-image: url('images/player.png')" (
+              button :tooltip "Käivita pidu!" :onclick "'/home/markus/.mas/Markuse asjad/Pidu!' & disown" "")
+          )
+          (box :class "icon" :style "background-image: url('images/excel.png')" (
+              button :tooltip "FreeOffice Planmaker" :onclick "freeoffice-planmaker" "")
+          )
+          (box :class "icon" :style "background-image: url('images/folder.png')" (
+              button :tooltip "Failisirvija" :onclick "/usr/bin/thunar & disown" "")
+          )
+        )
+        
+        (box :class "container" :orientation "h"
+          (box :class "icon" :style "background-image: url('images/maia.png')" (
+              button :tooltip "M.A.I.A. serveri haldamine" :onclick "floorp http://localhost:14414 & disown" ""
+              ))
+          (box :class "icon" :style "background-image: url('images/powerpoint.png')" (
+              button :tooltip "FreeOffice Presentations" :onclick "freeoffice-presentations" "")
+              )
+          (box :class "icon" :style "background-image: url('images/apps.png')" (
+              button :tooltip "Peamenüü" :onclick "omarchy-menu & disown" "")
+              )
+        )
+      ))

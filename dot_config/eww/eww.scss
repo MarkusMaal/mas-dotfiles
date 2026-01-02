@@ -1,0 +1,60 @@
+* {
+    all: unset;
+    font-family: REM, "Segoe UI", sans-serif;
+}
+
+.rootcontainer { 
+}
+
+.container {
+    opacity: 1;
+}
+
+tooltip {
+    text-shadow: 1px 1px 3px black;
+}
+
+.icon > * {
+    background-image: linear-gradient(145deg, rgba(100%,100%,100%,0.8) 0%, rgba(100%,100%,100%,0) 50%);
+    opacity: 0.5;
+    border-radius: 200px;
+}
+
+.icon {
+    background-color: #0047a0;
+    background-size: cover;
+    opacity: 0.75;
+    margin: 10px;
+    border-radius: 200px;
+    transition: 1s;
+}
+
+.logo {
+    background-image: url('images/logo.png');
+    background-size: 160px 160px;
+    background-repeat: no-repeat;
+    opacity: 1.0;
+    margin-right: 0;
+}
+
+.logo-text {
+    font-family: "Segoe UI Semilight", sans-serif;
+    font-size: 32px;
+    margin-bottom: 32px;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+
+button {
+    opacity: 0;
+    transition: 0.2s;    
+}
+
+button:hover {
+    opacity: 0.8;
+    background-color: rgba(0%,50%,100%,0.2);
+}
+
+button:active {
+    opacity: 0.6;
+    background-color: rgba(0%,0%,0%,0.3);
+}
