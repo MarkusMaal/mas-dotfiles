@@ -1,0 +1,69 @@
+{
+  "name": "vs-dark",
+  "editor": {
+    "bg": [30, 30, 30],
+    "fg": [216, 222, 233],
+    "cursor": [136, 192, 208],
+    "selection_bg": [87, 96, 114],
+    "current_line_bg": [49, 46, 92],
+    "line_number_fg": [40, 120, 158],
+    "line_number_bg": [26, 32, 44]
+  },
+  "ui": {
+    "tab_active_fg": [236, 239, 244],
+    "tab_active_bg": [25, 144, 209],
+    "tab_inactive_fg": [216, 222, 233],
+    "tab_inactive_bg": [26, 26, 26],
+    "tab_separator_bg": [45, 45, 48],
+    "status_bar_fg": [236, 239, 244],
+    "status_bar_bg": [66, 66, 67],
+    "prompt_fg": [236, 239, 244],
+    "prompt_bg": [25, 144, 209],
+    "prompt_selection_fg": [236, 239, 244],
+    "prompt_selection_bg": [25, 144, 209],
+    "popup_border_fg": [76, 86, 106],
+    "popup_bg": [62, 62, 66],
+    "popup_selection_bg": [25, 144, 209],
+    "popup_text_fg": [216, 222, 233],
+    "suggestion_bg": [46, 52, 64],
+    "suggestion_selected_bg": [76, 82, 94],
+    "help_bg": [46, 52, 64],
+    "help_fg": [216, 222, 233],
+    "help_key_fg": [69, 184, 216],
+    "help_separator_fg": [76, 86, 106],
+    "help_indicator_fg": [236, 239, 244],
+    "help_indicator_bg": [25, 144, 209],
+    "split_separator_fg": [76, 86, 106],
+    "menu_highlight_bg": [63, 63, 70],
+    "menu_bg": [45, 45, 48],
+    "menu_hover_bg": [63, 63, 70],
+    "menu_dropdown_bg": [37, 37, 37],
+    "menu_disabled_bg": [37, 37, 37],
+    "menu_border_fg": [37, 37, 37],
+    "menu_separator_fg": [63, 63, 70]
+  },
+  "search": {
+    "match_bg": [235, 203, 139],
+    "match_fg": [46, 52, 64]
+  },
+  "diagnostic": {
+    "error_fg": [191, 32, 48],
+    "error_bg": [59, 46, 50],
+    "warning_fg": [212, 168, 103],
+    "warning_bg": [59, 56, 46],
+    "info_fg": [129, 161, 193],
+    "info_bg": [46, 52, 64],
+    "hint_fg": [76, 86, 106],
+    "hint_bg": [46, 52, 64]
+  },
+  "syntax": {
+    "keyword": [86, 156, 214],
+    "string": [206, 145, 120],
+    "comment": [106, 153, 85],
+    "function": [220, 220, 170],
+    "type": [78, 201, 176],
+    "variable": [212, 212, 212],
+    "constant": [197, 134, 192],
+    "operator": [212, 212, 212]
+  }
+}
