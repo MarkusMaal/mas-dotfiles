@@ -12,3 +12,4 @@ source ~/.local/share/omarchy/default/bash/rc
 fastfetch
 echo "Kirjutage \"m\", et avada Markuse asjade käsurea töövahendid"
 alias m="~/scripts/Tools.sh"
+alias nano="fresh"
