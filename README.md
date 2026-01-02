@@ -26,7 +26,7 @@ My personal configuration of Omarchy Linux dotfiles. This doesn't contain my who
 * Package: extra/ddcutil (for monitor brightness adjustment)
 * AUR package: [aur/eww](https://aur.archlinux.org/eww.git) (for widgets)
 
-# Deployment
+## Deployment
 Once you meet the prerequisites, run the following command in terminal: `chezmoi init --apply https://github.com/MarkusMaal/mas-dotfiles.git`
 
 To pull new changes from this repository after installing the dotfiles, run the following command instead: `chezmoi update -v`
