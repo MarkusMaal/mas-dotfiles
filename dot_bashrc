@@ -9,7 +9,7 @@ source ~/.local/share/omarchy/default/bash/rc
 #
 # Make an alias for invoking commands you use constantly
 # alias p='python'
-fastfetch
+fastfetch -c screenfetch -l ~/.mas/mas_incons/mas_general.png --logo-width 32
 echo "Kirjutage \"m\", et avada Markuse asjade käsurea töövahendid"
 alias m="~/scripts/Tools.sh"
 alias nano="fresh"
