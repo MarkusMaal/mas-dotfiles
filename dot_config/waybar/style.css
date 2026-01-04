@@ -97,6 +97,19 @@ window {
   margin-top: -5px;
 }
 
+#tray > * > * > *{
+  font-size: 16px;
+  background: rgba(0%,2%,5%, 1.0);
+  padding: 0;
+  margin: 0;
+  transition: 0.2s;
+}
+
+#tray > * > * > *:hover {
+  font-size: 16px;
+  background: linear-gradient(rgba(40%, 40%, 100%, 0.9), rgba(60%, 60%, 100%, 0.8));
+}
+
 /*#bluetooth {
   margin-right: 17px;
   min-width: 32px;
@@ -117,7 +130,12 @@ window {
 }
 
 tooltip {
-  padding: 2px;
+  background: transparent;
+}
+
+tooltip > * > * {
+  font-size: 16px;
+    text-shadow: 1px 1px 3px black;
 }
 
 #custom-update {
