@@ -1,11 +1,11 @@
 {
   "reload_style_on_change": true,
   "layer": "bottom",
-  "position": "bottom",
+  "position": "top",
   "spacing": 8,
   "height": 32,
   "width": 2560,
-  "modules-left": ["custom/omarchy", "hyprland/workspaces"],
+  "modules-left": ["hyprland/workspaces"],
   "modules-center": ["clock", "custom/update", "custom/screenrecording-indicator"],
   "modules-right": [
     "group/tray-expander",
@@ -14,23 +14,10 @@
     "pulseaudio",
     "cpu",
     "battery",
+    "custom/brightness"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
-    "format": "{icon}",
-    "format-icons": {
-      "default": "",
-      "1": "1",
-      "2": "2",
-      "3": "3",
-      "4": "4",
-      "5": "5",
-      "6": "6",
-      "7": "7",
-      "8": "8",
-      "9": "9",
-      "active": "󱓻"
-    },
     "persistent-workspaces": {
       "1": [],
       "2": [],
@@ -100,9 +87,10 @@
   "bluetooth": {
     "format": "",
     "format-disabled": "󰂲",
+    "format-off": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "blueberry"
+    "on-click": "omarchy-launch-tui bluetui"
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -139,9 +127,13 @@
   },
 
   "custom/brightness": {
-	"on-scroll-up": "/usr/bin/brightness-adjust -1 +10",
-	"on-scroll-down": "/usr/bin/brightness-adjust -1 -10",
-	"tooltip": false,
-	"format": "🔆"
+	  "format": "☀",
+	  "signal": 8,
+	  "exec": "~/.config/waybar/scripts/brightness-per-monitor.sh get",
+	  "on-scroll-up": "~/.config/waybar/scripts/brightness-per-monitor.sh up",
+	  "on-scroll-down": "~/.config/waybar/scripts/brightness-per-monitor.sh down",
+	  "on-click": "~/.config/waybar/scripts/brightness-per-monitor.sh left_click",
+	  "on-click-right": "~/.config/waybar/scripts/brightness-per-monitor.sh right_click",
+	  "tooltip-format": "Monitor Brightness\nScroll: adjust\nLeft click: 100%\nRight click: 0%"
   }
 }

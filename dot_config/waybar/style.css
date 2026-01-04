@@ -1,18 +1,25 @@
 @import "../omarchy/current/theme/waybar.css";
 
 * {
-  background-color: @background;
   color: @foreground;
 
   border: none;
   border-radius: 16px;
   min-height: 0;
 
-  font-family: 'JetBrainsMono Nerd Font Mono';
-  font-size: 16px;
+  font-family: 'REM','JetBrainsMono Nerd Font Mono';
+  font-size: 20px;
+  margin-top: 3px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+window {
+  /*background: @background;*/
+  background: transparent;
 }
 
 .modules-left {
+  margin-top: -5px;
   margin-left: 8px;
 }
 
@@ -20,40 +27,92 @@
   margin-right: 8px;
 }
 
+#workspaces {
+ margin-top: 10px;
+ margin-bottom: 0;
+}
+
 #workspaces button {
   all: initial;
-  padding: 0 6px;
-  margin: 0 1.5px;
+  padding: 0 10px;
+  margin: 1px 2px;
   min-width: 9px;
+  transition: 0.2s;
+  border-radius: 32px;
+}
+
+#workspaces button > * {
+  margin-top: -1px;    
 }
 
 #workspaces button.empty {
   opacity: 0.5;
+  background: transparent;
 }
+
+#workspaces button.active {
+  background: linear-gradient(rgba(20%, 37.8%, 62.7%, 0.3), rgba(30%, 27.8%, 62.7%, 0.7));
+  opacity: 1.0;
+}
+
+#workspaces button:hover,
+#workspaces button.empty:hover,
+#workspaces button.active:hover
+{
+  background: linear-gradient(rgba(40%, 40%, 100%, 0.9), rgba(60%, 60%, 100%, 0.8));
+  opacity: 1.0;
+}
+
 
 #cpu,
 #battery,
 #pulseaudio,
 #custom-omarchy,
 #custom-screenrecording-indicator,
-#custom-update {
-  min-width: 12px;
+#custom-update,
+#custom-brightness,
+#bluetooth,
+#network {
   margin: 0 7.5px;
+  min-width: 32px;
+  margin-top: 4px;
+  background: linear-gradient(rgba(20%, 37.8%, 62.7%, 0.3), rgba(30%, 27.8%, 62.7%, 0.7));
+  transition: 0.2s;
+}
+
+#cpu:hover,
+#battery:hover,
+#pulseaudio:hover,
+#custom-omarchy:hover,
+#custom-screenrecording-indicator:hover,
+#custom-update:hover,
+#custom-brightness:hover,
+#bluetooth:hover,
+#network:hover {
+  background: linear-gradient(rgba(40%, 40%, 100%, 0.9), rgba(60%, 60%, 100%, 0.8));
 }
 
 #tray {
   margin-right: 16px;
+  margin-top: -5px;
 }
 
-#bluetooth {
+/*#bluetooth {
   margin-right: 17px;
+  min-width: 32px;
+  margin-bottom: 4px;
+  background: rgba(40%, 40%, 100%, 0.5);
 }
 
 #network {
   margin-right: 13px;
-}
+  min-width: 32px;
+  margin-bottom: 4px;
+  background: rgba(40%, 40%, 100%, 0.5);
+}*/
 
 #custom-expand-icon {
+  margin-bottom: 0;
   margin-right: 20px;
 }
 
@@ -67,6 +126,9 @@ tooltip {
 
 #clock {
   margin-left: 8.75px;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  font-size: 24px;
 }
 
 .hidden {
