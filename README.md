@@ -1,7 +1,7 @@
 # mas-dotfiles
 My personal configuration of Omarchy Linux dotfiles. This doesn't contain my whole setup, since I've also modified system stuff like the plymouth and limine as well. But here's a screenshot of what it currently looks like:
 
-<img width="2581" height="1440" alt="Screenshot" src="https://github.com/user-attachments/assets/e383c0e8-b902-4800-914c-0f2a2d68055f" />
+<img width="2570" height="1440" alt="Screenshot" src="https://github.com/user-attachments/assets/9c5f58b5-6d57-4631-a345-a43a833b365e" />
 
 ## Features
 * Integration with [Markus' computer stuff](https://github.com/MarkusMaal/Markuse-asjad-next) system (Markuse arvuti asjad)
