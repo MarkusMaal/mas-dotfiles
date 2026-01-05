@@ -130,9 +130,9 @@ window {
 }
 
 tooltip {
-  background: transparent;
+  background: rgba(5,0,20,0.3);
+  border-radius: 0;
 }
-
 tooltip > * > * {
   font-size: 16px;
     text-shadow: 1px 1px 3px black;
