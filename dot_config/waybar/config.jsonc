@@ -14,7 +14,8 @@
     "pulseaudio",
     "cpu",
     "battery",
-    "custom/brightness"
+    "custom/brightness",
+    "custom/smartboot"
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -127,13 +128,21 @@
   },
 
   "custom/brightness": {
-	  "format": "☀",
-	  "signal": 8,
-	  "exec": "~/.config/waybar/scripts/brightness-per-monitor.sh get",
-	  "on-scroll-up": "~/.config/waybar/scripts/brightness-per-monitor.sh up",
-	  "on-scroll-down": "~/.config/waybar/scripts/brightness-per-monitor.sh down",
-	  "on-click": "~/.config/waybar/scripts/brightness-per-monitor.sh left_click",
-	  "on-click-right": "~/.config/waybar/scripts/brightness-per-monitor.sh right_click",
-	  "tooltip-format": "Monitori heledus\nKerimine muudab väärtust\nVasakklikk: 100%\nParemklikk: 0%"
+    "format": "☀",
+    "signal": 8,
+    "exec": "~/.config/waybar/scripts/brightness-per-monitor.sh get",
+    "on-scroll-up": "~/.config/waybar/scripts/brightness-per-monitor.sh up",
+    "on-scroll-down": "~/.config/waybar/scripts/brightness-per-monitor.sh down",
+    "on-click": "~/.config/waybar/scripts/brightness-per-monitor.sh left_click",
+    "on-click-right": "~/.config/waybar/scripts/brightness-per-monitor.sh right_click",
+    "tooltip-format": "Monitori heledus\nKerimine muudab väärtust\nVasakklikk: 100%\nParemklikk: 0%"
+  },
+  
+  "custom/smartboot": {
+    "format": "❖",
+    "signal": 8,
+    "on-click": "xdg-terminal-exec sudo efibootmgr -o 0000,0002 && sudo reboot now",
+    "on-click-right": "uwsm app -- omarchy-windows-vm launch",
+    "tooltip-format": "Paremklikk: Käivita virtuaalarvuti\nVasakklikk: Taaskäivita Windowsisse"
   }
 }
