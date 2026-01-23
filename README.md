@@ -1,7 +1,7 @@
 # mas-dotfiles
 My personal configuration of Omarchy Linux dotfiles. This doesn't contain my whole setup, since I've also modified system stuff like the plymouth and limine as well. But here's a screenshot of what it currently looks like:
 
-<img width="2570" height="1440" alt="Screenshot" src="https://github.com/user-attachments/assets/9c5f58b5-6d57-4631-a345-a43a833b365e" />
+<img width="2842" height="1440" alt="Screenshot" src="https://github.com/user-attachments/assets/3a411c87-050c-446e-995a-b1ee79b5d799" />
 
 ## Features
 * Integration with [Markus' computer stuff](https://github.com/MarkusMaal/Markuse-asjad-next) system (Markuse arvuti asjad)
@@ -11,6 +11,7 @@ My personal configuration of Omarchy Linux dotfiles. This doesn't contain my who
 * Custom theme for fresh and nano TUI editors
 * DDC/CI monitor brightness adjustment (waybar and binds, not useful for eDP displays)
 * Custom hyprbars configuration
+* Custom style for walker menus
 * Other tweaks and stuff I can't immediately recall
 
 ## Prerequisites
