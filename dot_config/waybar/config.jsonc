@@ -6,7 +6,7 @@
   "height": 32,
   "width": 2560,
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock", "custom/update", "custom/screenrecording-indicator"],
+  "modules-center": ["clock", "custom/update", "custom/voxtype", "custom/screenrecording-indicator"],
   "modules-right": [
     "group/tray-expander",
     "bluetooth",
@@ -101,6 +101,7 @@
     "scroll-step": 5,
     "format-muted": "",
     "format-icons": {
+      "headphone": "",
       "default": ["", "", ""]
     }
   },
@@ -122,6 +123,19 @@
     "signal": 8,
     "return-type": "json"
   },
+  "custom/voxtype": {
+    "exec": "omarchy-voxtype-status",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "idle": "",
+      "recording": "󰍬",
+      "transcribing": "󰔟"
+    },
+    "tooltip": true,
+    "on-click-right": "omarchy-voxtype-config",
+    "on-click": "omarchy-voxtype-model"
+  },
   "tray": {
     "icon-size": 24,
     "spacing": 17
@@ -142,7 +156,7 @@
     "format": "❖",
     "signal": 8,
     "on-click": "xdg-terminal-exec sudo efibootmgr -o 0000,0002 && sudo reboot now",
-    "on-click-right": "uwsm app -- omarchy-windows-vm launch",
+    "on-click-right": "/opt/winboat/winboat",
     "tooltip-format": "Paremklikk: Käivita virtuaalarvuti\nVasakklikk: Taaskäivita Windowsisse"
   }
 }
