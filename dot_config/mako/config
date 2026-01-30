@@ -1,0 +1,22 @@
+text-color=#F0F8FFFF
+border-color=#6A90D230
+background-color=#050014E0
+width=512
+height=256
+padding=20
+border-size=1
+font=REM Light 14
+anchor=top-center
+outer-margin=10,0
+default-timeout=5000
+max-icon-size=32
+border-radius=0
+
+[app-name=Spotify]
+invisible=1
+
+[mode=do-not-disturb]
+invisible=true
+
+[mode=do-not-disturb app-name=notify-send]
+invisible=false
