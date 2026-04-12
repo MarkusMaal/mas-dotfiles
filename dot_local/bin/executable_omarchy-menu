@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# ~/.local/bin/omarchy-menu
+#
+# What this does:
+# - This is a tiny wrapper that ensures when you run `omarchy-menu`,
+#   it launches *your* customized Omarchy menu (the patched one),
+#   instead of the stock/upstream menu.
+#
+# Why it matters:
+# - Your Waybar config (and likely keybinds) call `omarchy-menu`.
+# - Without this wrapper in PATH, users would keep launching the stock menu.
+exec "$HOME/.config/omarchy/bin/omarchy-menu-mas.sh" "$@"
