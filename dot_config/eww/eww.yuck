@@ -52,7 +52,7 @@
               button :tooltip "FreeOffice Planmaker" :onclick "/home/$USER/scripts/eww_dbl_click.sh freeoffice-planmaker" "")
           )
           (box :class "icon" :style "background-image: url('images/folder.png')" (
-              button :tooltip "Failisirvija" :onclick "/home/$USER/scripts/eww_dbl_click.sh /usr/bin/thunar & disown" "")
+              button :tooltip "Failisirvija" :onclick "/home/$USER/scripts/eww_dbl_click.sh /usr/bin/dolphin & disown" "")
           )
         )
         

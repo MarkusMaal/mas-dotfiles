@@ -51,7 +51,7 @@ window {
 }
 
 #workspaces button.active {
-  background: linear-gradient(rgba(20%, 37.8%, 62.7%, 0.3), rgba(30%, 27.8%, 62.7%, 0.7));
+  background: linear-gradient(rgba(5%, 5%, 62.7%, 0.3), rgba(5%, 5%, 50%, 0.7));
   opacity: 1.0;
 }
 
@@ -59,7 +59,7 @@ window {
 #workspaces button.empty:hover,
 #workspaces button.active:hover
 {
-  background: linear-gradient(rgba(40%, 40%, 100%, 0.9), rgba(60%, 60%, 100%, 0.8));
+  background: linear-gradient(rgba(10%, 40%, 100%, 0.9), rgba(10%, 10%, 50%, 0.8));
   opacity: 1.0;
 }
 
@@ -68,15 +68,16 @@ window {
 #battery,
 #pulseaudio,
 #custom-omarchy,
-#custom-screenrecording-indicator,
+
 #custom-update,
 #custom-brightness,
+#custom-smartboot,
 #bluetooth,
 #network {
   margin: 0 7.5px;
   min-width: 32px;
   margin-top: 4px;
-  background: linear-gradient(rgba(20%, 37.8%, 62.7%, 0.3), rgba(30%, 27.8%, 62.7%, 0.7));
+  background: linear-gradient(rgba(5%, 5%, 62.7%, 0.3), rgba(5%, 5%, 50%, 0.7));
   transition: 0.2s;
 }
 
@@ -87,9 +88,10 @@ window {
 #custom-screenrecording-indicator:hover,
 #custom-update:hover,
 #custom-brightness:hover,
+#custom-smartboot:hover,
 #bluetooth:hover,
 #network:hover {
-  background: linear-gradient(rgba(40%, 40%, 100%, 0.9), rgba(60%, 60%, 100%, 0.8));
+  background: linear-gradient(rgba(10%, 40%, 100%, 0.9), rgba(10%, 10%, 50%, 0.8));
 }
 
 #tray {
@@ -143,7 +145,7 @@ tooltip > * > * {
 }
 
 #clock {
-  margin-left: 8.75px;
+  margin-left: 5px;
   margin-right: 4px;
   margin-bottom: 2px;
   font-size: 24px;
@@ -153,12 +155,31 @@ tooltip > * > * {
   opacity: 0;
 }
 
-#custom-screenrecording-indicator {
+
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
   min-width: 12px;
-  margin-left: 8.75px;
+  margin-left: 5px;
+  margin-right: 0;
   font-size: 10px;
+  padding-bottom: 1px;
 }
 
 #custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
+#custom-voxtype {
+  min-width: 12px;
+  margin: 0 0 0 7.5px;
+}
+
+#custom-voxtype.recording {
+  color: #a55555;
+}
+
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
   color: #a55555;
 }
