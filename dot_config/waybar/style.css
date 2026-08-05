@@ -1,4 +1,4 @@
-@import "../omarchy/current/theme/waybar.css";
+/*@import "../omarchy/current/theme/waybar.css";*/
 
 * {
   color: @foreground;
@@ -10,6 +10,7 @@
   font-family: 'REM','JetBrainsMono Nerd Font Mono';
   font-size: 20px;
   margin-top: 3px;
+  margin-bottom: 1px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
@@ -29,7 +30,6 @@ window {
 
 #workspaces {
  margin-top: 10px;
- margin-bottom: 0;
 }
 
 #workspaces button {
@@ -51,7 +51,7 @@ window {
 }
 
 #workspaces button.active {
-  background: linear-gradient(rgba(5%, 5%, 62.7%, 0.3), rgba(5%, 5%, 50%, 0.7));
+  background: linear-gradient(rgba(20%, 37.8%, 62.7%, 0.3), rgba(30%, 27.8%, 62.7%, 0.7));
   opacity: 1.0;
 }
 
@@ -59,7 +59,7 @@ window {
 #workspaces button.empty:hover,
 #workspaces button.active:hover
 {
-  background: linear-gradient(rgba(10%, 40%, 100%, 0.9), rgba(10%, 10%, 50%, 0.8));
+  background: linear-gradient(rgba(40%, 40%, 100%, 0.9), rgba(60%, 60%, 100%, 0.8));
   opacity: 1.0;
 }
 
@@ -70,15 +70,40 @@ window {
 #custom-omarchy,
 
 #custom-update,
+#custom-weather,
 #custom-brightness,
 #custom-smartboot,
+#custom-close-window,
 #bluetooth,
 #network {
-  margin: 0 7.5px;
+  margin: 0px 7.5px;
   min-width: 32px;
   margin-top: 4px;
-  background: linear-gradient(rgba(5%, 5%, 62.7%, 0.3), rgba(5%, 5%, 50%, 0.7));
+  padding-top: 2px;
+  padding-bottom: 2px;
+  background: linear-gradient(rgba(20%, 37.8%, 62.7%, 0.3), rgba(30%, 27.8%, 62.7%, 0.7));
   transition: 0.2s;
+}
+
+window#waybar.empty #clock {
+    /*font-size: 24px;*/
+}
+
+window#waybar.empty #window,
+window#waybar.empty #custom-close-window {
+    background: transparent;
+    color: transparent;
+    text-shadow: none;
+    margin-left: -150px;
+}
+    
+#window {
+    margin-top: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: 4px;
+    transition: 0.2s;
+    background: linear-gradient(rgba(20%, 37.8%, 62.7%, 0.3), rgba(30%, 27.8%, 62.7%, 0.7));
 }
 
 #cpu:hover,
@@ -87,24 +112,42 @@ window {
 #custom-omarchy:hover,
 #custom-screenrecording-indicator:hover,
 #custom-update:hover,
+#custom-weather:hover,
 #custom-brightness:hover,
 #custom-smartboot:hover,
+#custom-close-window:hover,
 #bluetooth:hover,
 #network:hover {
-  background: linear-gradient(rgba(10%, 40%, 100%, 0.9), rgba(10%, 10%, 50%, 0.8));
+  background: linear-gradient(rgba(40%, 40%, 100%, 0.9), rgba(60%, 60%, 100%, 0.8));
 }
 
 #tray {
-  margin-right: 16px;
-  margin-top: -5px;
+  margin-right: 4px;
+  margin-top: 0px;
 }
 
 #tray > * > * > *{
   font-size: 16px;
-  background: rgba(0%,2%,5%, 1.0);
+  background: rgba(0%,8%,18%, 0.8);
   padding: 0;
   margin: 0;
+  border-radius: 0;
   transition: 0.2s;
+  text-shadow: none;
+}
+
+#tray > * > * > * > * > * > *{
+    font-size: 16px;
+    margin: 0;
+}
+
+#tray > * > * > * > * > *{
+    margin-left: -10px;
+}
+
+#tray > * > * > * > *:hover {
+  background: rgba(0%,68%,88%, 0.8);
+  border-radius: 0;
 }
 
 #tray > * > * > *:hover {
@@ -145,10 +188,9 @@ tooltip > * > * {
 }
 
 #clock {
-  margin-left: 5px;
-  margin-right: 4px;
-  margin-bottom: 2px;
-  font-size: 24px;
+  margin-top: 4px;
+  min-width: 80px;
+  font-size: 21px;
 }
 
 .hidden {
@@ -182,4 +224,25 @@ tooltip > * > * {
 #custom-idle-indicator.active,
 #custom-notification-silencing-indicator.active {
   color: #a55555;
+}
+
+#custom-weather {
+  margin-left: 7.5px;
+  margin-right: 7.5px;
+}
+
+#custom-weather.unavailable {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#custom-close-window {
+    padding-top: 3px;
+    padding-bottom: 1px;
+    background: linear-gradient(rgba(62.7%, 17.8%, 0%, 0.3), rgba(62.7%, 7.8%, 30%, 0.7));
+}
+
+#custom-close-window:hover {
+     background: linear-gradient(rgba(100%, 20%, 20%, 0.9), rgba(100%, 40%, 80%, 0.8));
 }

@@ -88,10 +88,14 @@ if "show_integratsioon_menu()" not in s:
       custom_fn = r'''
 
 show_integratsioon_menu() {
-  case $(menu "Integratsioon" "  Markuse arvuti juhtpaneel\n  Käsurea tööriistad\n󰖺  Käivita MarkuStation\n𝅘𝅥𝅮 Käivita Pidu\n󰍲 Taaskäivita Windowsisse\n🗔 Lae töölauaikoonid uuesti") in
+  case $(menu "Integratsioon" "  Markuse arvuti juhtpaneel\n  TUI juhtpaneel (eelvaade)\n  Käsurea tööriistad\n󰖺  Käivita MarkuStation\n𝅘𝅥𝅮 Käivita Pidu\n󰍲 Taaskäivita Windowsisse\n💡 Tuled kustu\n💡 Tuled põlema\n🗔 Lae töölauaikoonid uuesti") in
 
     *"Markuse arvuti juhtpaneel"*)
       exec "$HOME/.mas/Markuse asjad/Markuse arvuti juhtpaneel"
+      ;;
+      
+    *"TUI juhtpaneel (eelvaade)"*)
+      present_terminal "$HOME/.mas/Markuse\ asjad/MasCpanel"
       ;;
 
     *"Käsurea tööriistad"*)
@@ -109,6 +113,12 @@ show_integratsioon_menu() {
       ;;
     *"Lae töölauaikoonid uuesti"*)
       eww close desktop; eww close logo; eww open logo; eww open desktop
+      ;;
+    *"Tuled kustu"*)
+      killall openrgb; openrgb --mode direct --color 000000 2>/dev/null >/dev/null & disown
+      ;;
+    *"Tuled põlema"*)
+      killall openrgb; openrgb --startminimized </dev/null 2>/dev/null & disown
       ;;
     *)
       # Anything else returns to the main menu.

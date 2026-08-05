@@ -5,7 +5,7 @@
   "spacing": 8,
   "height": 32,
   "width": 2560,
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock", "custom/update", "custom/voxtype", "custom/screenrecording-indicator", "custom/idle-indicator", "custom/notification-silencing-indicator"],
   "modules-right": [
     "group/tray-expander",
@@ -15,7 +15,8 @@
     "cpu",
     "battery",
     "custom/brightness",
-    "custom/smartboot"
+    "custom/smartboot",
+    "custom/close-window",
   ],
   "hyprland/workspaces": {
     "on-click": "activate",
@@ -53,6 +54,13 @@
     "tooltip": false,
     "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
   },
+  "custom/weather": {
+    "exec": "$OMARCHY_PATH/default/waybar/weather.sh",
+    "return-type": "json",
+    "interval": 60,
+    "tooltip": false,
+    "on-click": "notify-send -u low \"$(omarchy-weather-status)\""
+  },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format": "{icon}",
@@ -80,6 +88,7 @@
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     "interval": 5,
     "on-click": "omarchy-menu power",
+    "on-click-right": "notify-send -u low \"$(omarchy-battery-status)\"",
     "states": {
       "warning": 20,
       "critical": 10
@@ -119,7 +128,7 @@
     "tooltip": false
   },
   "custom/screenrecording-indicator": {
-    "on-click": "omarchy-cmd-screenrecord",
+    "on-click": "omarchy-capture-screenrecording",
     "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
     "signal": 8,
     "return-type": "json"
@@ -171,5 +180,17 @@
     "on-click": "xdg-terminal-exec sudo efibootmgr -o 0000,0002 && sudo reboot now",
     "on-click-right": "/opt/winboat/winboat",
     "tooltip-format": "Paremklikk: Käivita virtuaalarvuti\nVasakklikk: Taaskäivita Windowsisse"
+  },
+  
+  "custom/close-window": {
+      "format": "X",
+      "signal": 8,
+      "on-click": "hyprctl dispatch killactive",
+      "tooltip-format": "Sulge aken"
+  },
+  
+  "hyprland/window": {
+      "format": "{}",
+      "icon": true,
   }
 }

@@ -52,14 +52,14 @@
               button :tooltip "FreeOffice Planmaker" :onclick "/home/$USER/scripts/eww_dbl_click.sh freeoffice-planmaker" "")
           )
           (box :class "icon" :style "background-image: url('images/folder.png')" (
-              button :tooltip "Failisirvija" :onclick "/home/$USER/scripts/eww_dbl_click.sh /usr/bin/dolphin & disown" "")
+              button :tooltip "Failid" :onclick "/home/$USER/scripts/eww_dbl_click.sh /usr/bin/dolphin & disown" "")
           )
         )
         
         (box :class "container" :orientation "h"
           (box :class "icon" :style "background-image: url('images/maia.png')" (
-              button :tooltip "M.A.I.A. serveri haldamine" :onclick "/home/$USER/scripts/eww_dbl_click.sh xdg-open https://localhost:14414" ""
-              ))
+              button :tooltip "M.A.I.A. serveri haldamine" :onclick "/home/$USER/scripts/eww_dbl_click.sh xdg-open https://localhost:14414" "")
+              )
           (box :class "icon" :style "background-image: url('images/powerpoint.png')" (
               button :tooltip "FreeOffice Presentations" :onclick "/home/$USER/scripts/eww_dbl_click.sh freeoffice-presentations" "")
               )
@@ -68,3 +68,4 @@
               )
         )
       ))
+

@@ -1,15 +1,23 @@
 # If not running interactively, don't do anything (leave this at the top of this file)
 [[ $- != *i* ]] && return
-
+#set -v
 # All the default Omarchy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
 source ~/.local/share/omarchy/default/bash/rc
-
+PATH="$PATH:/home/markus/.mas/Markuse asjad"
 # Add your own exports, aliases, and functions here.
 #
 # Make an alias for invoking commands you use constantly
 # alias p='python'
 fastfetch -c screenfetch -l ~/.mas/mas_incons/mas_general.png --logo-width 32
 echo "Kirjutage \"m\", et avada Markuse asjade käsurea töövahendid"
-alias m="~/scripts/Tools.sh"
+alias m="~/scripts/Tools.sh sl"
 alias nano="fresh"
+alias rebootwindows="sudo efibootmgr -o 0000,0002 && sudo reboot now"
+source ~/.bashrc_private
+source /usr/share/nvm/init-nvm.sh 2>/dev/null
+alias setsplitbg="omarchy theme bg set ~/.mas/bg_singlemon.png"
+alias setdefaultbg="omarchy theme bg set ~/.mas/bg_desktop.png"
+alias startparty="sh ~/scripts/start_party.sh"
+alias stopparty="sh ~/scripts/stop_party.sh"
+alias rmweb="ssh ubuntu@uvn-72-176.tll01.zonevs.eu"

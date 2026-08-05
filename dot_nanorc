@@ -46,7 +46,6 @@ include /usr/share/nano/autoconf.nanorc
 include /usr/share/nano/nanohelp.nanorc
 include /usr/share/nano/po.nanorc
 include /usr/share/nano/html.nanorc
-include /usr/share/nano/elisp.nanorc
 include /usr/share/nano/objc.nanorc
 include /usr/share/nano/email.nanorc
 include /usr/share/nano/tex.nanorc

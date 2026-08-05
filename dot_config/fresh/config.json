@@ -1,6 +1,27 @@
 {
+  "version": 2,
   "theme": "vs-dark",
   "editor": {
     "mouse_hover_enabled": false
+  },
+  "lsp": {
+    "bash": {
+      "enabled": false,
+      "auto_start": false,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    },
+    "python": {
+      "enabled": false,
+      "auto_start": false,
+      "process_limits": {
+        "max_memory_percent": 50,
+        "max_cpu_percent": 90,
+        "enabled": true
+      }
+    }
   }
 }
