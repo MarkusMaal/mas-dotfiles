@@ -1,7 +1,7 @@
 # mas-dotfiles
 My personal configuration of Omarchy Linux dotfiles. This doesn't contain my whole setup, since I've also modified system stuff like the plymouth and limine as well (you can find those [here](https://github.com/MarkusMaal/mas-oscfg)). But here's a screenshot of what it currently looks like:
 
-<img width="2575" height="1440" alt="pilt" src="https://github.com/user-attachments/assets/a3710a80-4aaf-428e-80e9-74f55859465a" />
+<img width="2559" height="1440" alt="pilt" src="https://github.com/user-attachments/assets/e885b94c-699b-42bd-acb3-dc5f46ceddf0" />
 
 ## Features
 * Integration with [Markus' computer stuff](https://github.com/MarkusMaal/Markuse-asjad-next) system (Markuse arvuti asjad)
@@ -12,6 +12,7 @@ My personal configuration of Omarchy Linux dotfiles. This doesn't contain my who
 * DDC/CI monitor brightness adjustment (waybar and binds, not useful for eDP displays)
 * Custom hyprbars configuration
 * Custom style for walker menus
+* Custom submenu for walker
 * Other tweaks and stuff I can't immediately recall
 
 ## Prerequisites
