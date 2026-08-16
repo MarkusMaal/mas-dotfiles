@@ -1,4 +1,6 @@
 # mas-dotfiles
+**NOTE**: This project has been deprecated and is **incompatible** with Omarchy Quattro update
+
 My personal configuration of Omarchy Linux dotfiles. This doesn't contain my whole setup, since I've also modified system stuff like the plymouth and limine as well (you can find those [here](https://github.com/MarkusMaal/mas-oscfg)). But here's a screenshot of what it currently looks like:
 
 <img width="2559" height="1440" alt="pilt" src="https://github.com/user-attachments/assets/e885b94c-699b-42bd-acb3-dc5f46ceddf0" />
